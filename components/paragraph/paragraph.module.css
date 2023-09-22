@@ -1,0 +1,29 @@
+.h16 {
+  color: var(--text--color);
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.h14 {
+  color: var(--text--color);
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.h18 {
+  color: var(--text--color);
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+}
+.p {
+  margin: 0;
+}

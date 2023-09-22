@@ -1,7 +1,7 @@
 import "../../styles/main.css";
-import TheHeader from "../../components/TheHeader";
+
 import type { Metadata } from "next";
-import TheFooter from "../../components/TheFooter";
+
 import { Noto_Sans } from "next/font/google";
 
 const notoSans = Noto_Sans({
@@ -21,9 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TheHeader />
         <main>{children}</main>
-        <TheFooter />
       </body>
     </html>
   );

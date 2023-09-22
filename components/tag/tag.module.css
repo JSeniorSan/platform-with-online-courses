@@ -1,0 +1,58 @@
+.tag {
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  display: inline-block;
+  color: var(--text--color);
+}
+
+.s {
+  text-align: center;
+  font-size: 12px;
+  line-height: normal;
+  padding: 5px 10px 5px 10px;
+}
+
+.m {
+  line-height: 14px;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.red {
+  background-color: var(--background--hh);
+  font-weight: 600;
+  color: var(--text--secondary--color);
+
+  font-style: normal;
+  font-family: Noto Sans;
+}
+
+.grey {
+  font-weight: 600;
+  background-color: var(--background--topTag);
+  color: var(--text--secondary--color);
+  font-style: normal;
+
+  line-height: 14px;
+}
+
+.green {
+  background-color: var(--background--cost);
+  font-weight: 700;
+  color: var(--text--color-cost);
+}
+.primary {
+  border: 1px solid var(--background--primary);
+  font-weight: 500;
+  background-color: none;
+  color: var(--background--primary);
+}
+
+.default {
+  border: 1px solid var(--text--ghost);
+  font-weight: 500;
+  color: var(--text--color);
+  margin-right: 5px;
+}

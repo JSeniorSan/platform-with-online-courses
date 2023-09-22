@@ -2,6 +2,12 @@
 :root {
   --text--color: #3b434e;
   --text--secondary--color: white;
+  --background--hh: #de0000;
+  --background--cost: #c8f8e4;
+  --background--topTag: #b3c0d9;
+  --background--primary: #7653fc;
+  --text--color-cost: #1dc37e;
+  --text--ghost: #ebebeb;
 }
 html,
 body {
