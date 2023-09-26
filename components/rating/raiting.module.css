@@ -4,3 +4,7 @@
 .star {
   margin-right: 5px;
 }
+
+.editable {
+  fill: var(--background--primary);
+}

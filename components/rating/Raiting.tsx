@@ -23,18 +23,42 @@ export const RaitingComponent = ({
     const starArr = ratingAmount.map(
       (_rat: JSX.Element, i: number): JSX.Element => {
         return (
-          <StarUi
-            className={cn(styles.star, {
-              [styles.filled]: i < currentRating,
-            })}
+          <span
             key={i}
+            onMouseEnter={() => mouseEnterHandle(i + 1)}
+            onMouseLeave={() => mouseLeaveHandle(rating)}
+            tabIndex={isEditable ? 0 : -1}
+            onClick={() => onClick(i + 1)}
             {...props}
-          />
+          >
+            <StarUi
+              className={cn(styles.star, {
+                [styles.filled]: i < currentRating,
+              })}
+            />
+          </span>
         );
       }
     );
     setRatingAmount(starArr);
   };
+
+  const onClick = (i: number) => {
+    if (!isEditable || !setRating) return;
+    setRating(i);
+  };
+
+  const mouseEnterHandle = (i: number) => {
+    if (!isEditable || !setRating) return;
+    changeRating(i);
+  };
+
+  const mouseLeaveHandle = (i: number) => {
+    if (!isEditable || !setRating) return;
+    changeRating(i);
+  };
+
+  console.log("rendered");
 
   return (
     <div {...props}>

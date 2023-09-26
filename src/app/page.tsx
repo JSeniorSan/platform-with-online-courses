@@ -1,10 +1,14 @@
+"use client";
 import { Button } from "../../components/button/Button";
 import { Hteg } from "../../components/hteg/Hteg";
 import "../../styles/main.css";
 import { P } from "../../components/paragraph/P";
 import { Tag } from "../../components/tag/Tag";
 import { RaitingComponent } from "../../components/rating/Raiting";
+import { useState } from "react";
 export default function Home(): JSX.Element {
+  const [rating, setRating] = useState<number>(4);
+
   return (
     <article>
       <Tag size="s" color="default">
@@ -26,7 +30,7 @@ export default function Home(): JSX.Element {
       <Button appearence="primary" arrow="none">
         Узнать подробнее
       </Button>
-      <Button appearence="secondary" arrow="right">
+      <Button appearence="secondary" arrow="down">
         Читать отзывы
       </Button>
 
@@ -58,7 +62,11 @@ export default function Home(): JSX.Element {
         офис. В этой профессии важным считается вдохновение, поэтому дизайнеры
         ищут его в разных местах.
       </P>
-      <RaitingComponent rating={1} isEditable={false} />
+      <RaitingComponent
+        rating={rating}
+        isEditable={true}
+        setRating={setRating}
+      />
     </article>
   );
 }

@@ -1,5 +1,3 @@
-import { IStarUi } from "./raiting.props";
-
 export const StarUi = ({ ...props }) => {
   return (
     <svg
