@@ -1,8 +1,8 @@
 import { IButton } from "./button.props";
 import { Arrow } from "../ui/Arrow";
 
-import styles from "./button.module.css";
-import "../../styles/main.css";
+import styles from "./button.module.scss";
+
 import cn from "classnames";
 export const Button = ({
   arrow = "none",

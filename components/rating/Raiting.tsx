@@ -1,9 +1,9 @@
 "use client";
-import { StarUi } from "./StarUi";
+import { StarUi } from "../ui/StarUi";
 import { useState, useEffect } from "react";
 import { IRaiting } from "./raiting.props";
 import cn from "classnames";
-import styles from "./raiting.module.css";
+import styles from "./raiting.module.scss";
 
 export const RaitingComponent = ({
   rating,

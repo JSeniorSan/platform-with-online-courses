@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 260px minmax(320px, 1200px) auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: ". header header ." ". sideBar main ." "footer footer footer footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: aquamarine;
+  display: none;
+}
+@media (minwidth: 765px) {
+  .header {
+    display: block;
+  }
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(128, 141, 136);
+}
+
+.sideBar {
+  grid-area: sideBar;
+  background-color: rgb(186, 138, 50);
+}
+
+.main {
+  grid-area: main;
+  background-color: rgb(139, 28, 139);
+}/*# sourceMappingURL=Layout.module.css.map */

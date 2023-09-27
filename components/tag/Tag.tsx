@@ -1,5 +1,5 @@
 import { ITag } from "./Tag.props";
-import styles from "./tag.module.css";
+import styles from "./tag.module.scss";
 import cn from "classnames";
 export const Tag = ({
   color,

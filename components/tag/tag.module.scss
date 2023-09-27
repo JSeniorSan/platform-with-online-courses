@@ -24,6 +24,7 @@
   background-color: var(--background--hh);
   font-weight: 600;
   color: var(--text--secondary--color);
+
   font-style: normal;
   font-family: Noto Sans;
 }
@@ -33,6 +34,7 @@
   background-color: var(--background--topTag);
   color: var(--text--secondary--color);
   font-style: normal;
+
   line-height: 14px;
 }
 
@@ -41,7 +43,6 @@
   font-weight: 700;
   color: var(--text--color-cost);
 }
-
 .primary {
   border: 1px solid var(--background--primary);
   font-weight: 500;
@@ -54,4 +55,4 @@
   font-weight: 500;
   color: var(--text--color);
   margin-right: 5px;
-}/*# sourceMappingURL=tag.module.css.map */
+}

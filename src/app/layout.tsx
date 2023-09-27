@@ -1,5 +1,7 @@
-import "../../styles/main.css";
-
+import Footer from "../../layouts/footer/Footer";
+import Header from "../../layouts/header/Header";
+import SideBar from "../../layouts/sidebar/SideBar";
+import styles from "../../layouts/layout.module.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <div className={styles.wrapper}>
+          <Header />
+          <SideBar />
+          <main className={styles.main}>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

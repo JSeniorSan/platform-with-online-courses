@@ -29,18 +29,18 @@
 .arrowPic {
   margin-left: 10px;
   display: inline-block;
+
   transition: all 0.2s;
 }
 
 .arrowPicDown {
   transform: rotate(90deg);
+
   /* padding: 10px; */
 }
-
 .primary:hover {
   background-color: #5137b7;
 }
-
 .secondary:hover {
   background-color: #7653fc;
   color: var(--text--secondary--color);
@@ -50,4 +50,4 @@
 .primary svg,
 .secondary:hover svg {
   fill: var(--text--secondary--color);
-}/*# sourceMappingURL=button.module.css.map */
+}
