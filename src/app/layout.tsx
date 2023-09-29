@@ -3,7 +3,7 @@ import Header from "../../layouts/header/Header";
 import SideBar from "../../layouts/sidebar/SideBar";
 import styles from "../../layouts/layout.module.scss";
 import type { Metadata } from "next";
-import { AppContextProvider, IAppContext } from "../../context/app.context";
+import HOK from "../../layouts/hoc/HOK";
 
 export const metadata: Metadata = {
   title: "Main menu",
@@ -18,14 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppContextProvider>
+        <HOK>
           <div className={styles.wrapper}>
             <Header />
             <SideBar />
             <main className={styles.main}>{children}</main>
             <Footer />
           </div>
-        </AppContextProvider>
+        </HOK>
       </body>
     </html>
   );

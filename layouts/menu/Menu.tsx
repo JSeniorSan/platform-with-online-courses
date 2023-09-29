@@ -4,14 +4,14 @@ import { useContext } from "react";
 import { AppContext, IAppContext } from "../../context/app.context";
 import { MenuItem } from "../../interfaces/menu/menu.interfaces";
 import { useEffect } from "react";
-export function Menu({ menuData }: { menuData: MenuItem[] }): JSX.Element {
-  const { menu, setMenu } = useContext<IAppContext>(AppContext);
+export function Menu(): JSX.Element {
+  const { menu, setMenu, firstCategory } = useContext<IAppContext>(AppContext);
 
-  useEffect(() => {
-    if (setMenu) {
-      return setMenu(menuData);
-    }
-  }, [menu, setMenu, menuData]);
+  // useEffect(() => {
+  //   setMenu && setMenu();
+  // }, [menu, setMenu]);
+
+  // setMenu && setMenu()
   return (
     <ul>
       {menu.map((m) => {

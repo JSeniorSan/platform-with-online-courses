@@ -8,28 +8,28 @@ import { useState } from "react";
 import { ReactNode } from "react";
 export interface IAppContext {
   menu: MenuItem[];
-  //   firstCategory: TopLevelCategory;
+  firstCategory: TopLevelCategory;
   setMenu?: (newMenu: MenuItem[]) => void;
 }
 
 export const AppContext = createContext<IAppContext>({
   menu: [],
-  //   firstCategory: TopLevelCategory.Courses,
+  firstCategory: TopLevelCategory.Courses,
 });
 
 export const AppContextProvider = ({
   children,
-}: {
-  children: ReactNode;
-}): JSX.Element => {
-  const [menuState, setMenuState] = useState<MenuItem[]>([]);
+  menu,
+  firstCategory,
+}: IAppContext & { children: ReactNode }): JSX.Element => {
+  const [menuState, setMenuState] = useState<MenuItem[]>(menu);
 
   const setMenu = (newMenu: MenuItem[]) => {
     setMenuState(newMenu);
   };
 
   return (
-    <AppContext.Provider value={{ menu: menuState, setMenu }}>
+    <AppContext.Provider value={{ menu: menuState, setMenu, firstCategory }}>
       {children}
     </AppContext.Provider>
   );
