@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap");
-
+@import "../layouts/menu/menu.module.scss";
 :root {
   --text--color: #3b434e;
   --text--secondary--color: #fff;
@@ -9,6 +9,7 @@
   --background--primary: #7653fc;
   --text--color-cost: #1dc37e;
   --text--ghost: #ebebeb;
+  --wrapper--color: #f5f6f8;
 }
 html,
 body {

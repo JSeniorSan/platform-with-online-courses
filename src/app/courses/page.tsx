@@ -1,7 +1,7 @@
 import "../../../styles/main.scss";
 import React from "react";
 import Link from "next/link";
-function Courses() {
+async function Courses() {
   return (
     <div>
       Hi
