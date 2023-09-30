@@ -2,46 +2,12 @@
 import React from "react";
 import { useContext } from "react";
 import { AppContext, IAppContext } from "../../context/app.context";
-import {
-  IFirstLevelMenuItem,
-  MenuItem,
-  IPageItem,
-} from "../../interfaces/menu/menu.interfaces";
-import { TopLevelCategory } from "../../interfaces/toplevel/page.interfaces";
-import CoursesIcon from "../menu/icons/Courses";
-import ServicesIcon from "./icons/Services";
-import BooksIcon from "./icons/Books";
-import ProductsIcon from "./icons/Products";
+import { IPageItem } from "../../interfaces/menu/menu.interfaces";
+import { firstLevelMenu } from "../../helpers/helpers";
 import styles from "./menu.module.scss";
 import cn from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const firstLevelMenu: IFirstLevelMenuItem[] = [
-  {
-    route: "courses",
-    name: "Курсы",
-    icon: <CoursesIcon />,
-    id: TopLevelCategory.Courses,
-  },
-  {
-    route: "services",
-    name: "Сервисы",
-    icon: <ServicesIcon />,
-    id: TopLevelCategory.Services,
-  },
-  {
-    route: "books",
-    name: "Книги",
-    icon: <BooksIcon />,
-    id: TopLevelCategory.Books,
-  },
-  {
-    route: "products",
-    name: "Продукты",
-    icon: <ProductsIcon />,
-    id: TopLevelCategory.Products,
-  },
-];
 
 export function Menu(): JSX.Element {
   const pathname = usePathname();

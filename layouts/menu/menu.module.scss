@@ -10,11 +10,15 @@
   color: var(--text--color);
   text-decoration: none;
   margin-top: 10px;
+  margin-left: 22px;
   &:hover {
     color: var(--background--primary);
     svg {
       fill: var(--background--primary);
     }
+  }
+  &:last-child {
+    margin-bottom: 15px;
   }
 }
 
@@ -38,7 +42,7 @@
 }
 
 .secondBlock {
-  margin-left: 12px;
+  margin-left: 34px;
   padding-left: 32px;
   border-left: 1px solid #dfdfdf;
   margin-top: 15px;

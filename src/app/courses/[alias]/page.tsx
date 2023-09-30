@@ -4,7 +4,7 @@ import axios from "axios";
 import { MenuItem } from "../../../../interfaces/menu/menu.interfaces";
 import { TopPageModel } from "../../../../interfaces/toplevel/page.interfaces";
 import { ProductModel } from "../../../../interfaces/toplevel/product.interfaces";
-import Link from "next/link";
+
 const firstCategory = 0;
 // export async function generateStaticParams() {
 //   const { data: menu } = await axios.post<MenuItem[]>(
@@ -39,10 +39,5 @@ export default async function Course({
     }
   );
 
-  return (
-    <div>
-      {product.length}
-      <Link href="/courses">Back</Link>
-    </div>
-  );
+  return <div>{product.length}</div>;
 }

@@ -87,10 +87,17 @@
 }
 
 .sideBar {
+  display: grid;
+  align-content: start;
+  gap: 20px;
   grid-area: sideBar;
   background-color: var(--wrapper--color);
   @include adaptive(765px) {
     display: none;
+  }
+  .logo {
+    margin-top: 34px;
+    margin-left: 34px;
   }
 }
 

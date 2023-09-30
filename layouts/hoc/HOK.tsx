@@ -7,6 +7,12 @@ async function HOK({
 }: {
   children: React.ReactNode;
 }): Promise<JSX.Element> {
+  // const pathname = usePathname();
+  // const typeofCategory = firstLevelMenu.find((element) => {
+  //   return element.route === pathname.split("/")[1];
+  // });
+  // console.log(typeofCategory);
+
   const firstCategory = 0;
   const { data: menu } = await axios.post<MenuItem[]>(
     process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
@@ -14,6 +20,7 @@ async function HOK({
       firstCategory,
     }
   );
+
   return (
     <AppContextProvider menu={menu} firstCategory={firstCategory}>
       {children}
