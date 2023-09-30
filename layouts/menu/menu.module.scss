@@ -9,16 +9,11 @@
   line-height: normal;
   color: var(--text--color);
   text-decoration: none;
+  margin-top: 10px;
   &:hover {
     color: var(--background--primary);
     svg {
       fill: var(--background--primary);
-    }
-  }
-  a {
-    text-decoration: none;
-    span {
-      text-decoration: none;
     }
   }
 }
@@ -47,7 +42,12 @@
   padding-left: 32px;
   border-left: 1px solid #dfdfdf;
   margin-top: 15px;
-  div {
+
+  .secondLevelOrdinary {
+    display: none;
+  }
+  .secondLevelActive {
+    display: block;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,10 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+
+    .thirdLevelActive {
+      color: var(--background--primary);
+    }
   }
 }
 
