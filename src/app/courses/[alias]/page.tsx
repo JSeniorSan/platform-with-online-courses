@@ -4,18 +4,9 @@ import axios from "axios";
 import { MenuItem } from "../../../../interfaces/menu/menu.interfaces";
 import { TopPageModel } from "../../../../interfaces/toplevel/page.interfaces";
 import { ProductModel } from "../../../../interfaces/toplevel/product.interfaces";
+import TopPageComponent from "../../../../page-components/TopPage/TopPageComponent";
 
 const firstCategory = 0;
-// export async function generateStaticParams() {
-//   const { data: menu } = await axios.post<MenuItem[]>(
-//     process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
-//     {
-//       firstCategory,
-//     }
-//   );
-
-//   return menu.flatMap((m) => m.pages.map((p) => "/courses/" + p.alias));
-// }
 
 export default async function Course({
   params,
@@ -39,5 +30,5 @@ export default async function Course({
     }
   );
 
-  return <div>{product.length}</div>;
+  return <TopPageComponent page={page} menu={menu} product={product} />;
 }

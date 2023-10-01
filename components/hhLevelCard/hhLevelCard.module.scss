@@ -1,0 +1,31 @@
+.levelCard {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 908px;
+  height: 140px;
+  flex-shrink: 0;
+  color: var(--text--color);
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+
+  .level {
+    width: 314px;
+    justify-self: center;
+    align-self: center;
+    p {
+      margin: 0;
+    }
+    div {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+  .LineActive {
+    border-right: 1px solid #ebebeb;
+  }
+}

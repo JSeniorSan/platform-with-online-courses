@@ -22,7 +22,12 @@ export default function RootLayout({
           <div className={styles.wrapper}>
             <Header />
             <SideBar />
-            <main className={styles.main}>{children}</main>
+            <main
+              className={styles.main}
+              style={{ backgroundColor: "var(--wrapper--color)" }}
+            >
+              {children}
+            </main>
             <Footer />
           </div>
         </HOK>
