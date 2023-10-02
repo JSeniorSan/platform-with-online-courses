@@ -4,7 +4,7 @@ import axios from "axios";
 import { MenuItem } from "../../../../interfaces/menu/menu.interfaces";
 import { TopPageModel } from "../../../../interfaces/toplevel/page.interfaces";
 import { ProductModel } from "../../../../interfaces/toplevel/product.interfaces";
-import TopPageComponent from "../../../../page-components/TopPage/TopPageComponent";
+import TopPageComponent from "../../../../page-components/MainPage/TopPageComponent";
 
 const firstCategory = 0;
 

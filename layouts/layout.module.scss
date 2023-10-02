@@ -83,6 +83,7 @@
   @include adaptive(765px) {
     grid-template-columns: auto;
     align-items: center;
+    justify-content: end;
   }
 }
 
@@ -104,5 +105,5 @@
 .main {
   grid-area: main;
   background-color: var(--text--secondary--color);
-  border: 1px solid rgba(0, 0, 0, 0.361);
+  // border: 1px solid rgba(0, 0, 0, 0.361);
 }

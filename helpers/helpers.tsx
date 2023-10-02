@@ -31,3 +31,6 @@ export const firstLevelMenu: IFirstLevelMenuItem[] = [
     id: TopLevelCategory.Products,
   },
 ];
+
+export const RegexRuPrice = (price: number): string =>
+  price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");

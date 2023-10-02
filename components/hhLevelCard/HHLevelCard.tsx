@@ -1,5 +1,4 @@
 import Card from "../card/Card";
-import { Hteg } from "../hteg/Hteg";
 import styles from "./hhLevelCard.module.scss";
 import { ILevelCard } from "./HHLevelCard.props";
 import cn from "classnames";
@@ -18,9 +17,9 @@ function HHLevelCard({
           [styles.LineActive]: line === true,
         })}
       >
-        <p>Начальный</p>
-        <Hteg teg="h3">{firstPrice}</Hteg>
-        <div>
+        <div className={styles.title}>Начальный</div>
+        <div className={styles.salary}>{firstPrice + " " + "₽"}</div>
+        <div className={styles.stars}>
           <StarUiOrange />
           <StarUiGrey />
           <StarUiGrey />
@@ -31,18 +30,18 @@ function HHLevelCard({
           [styles.LineActive]: line,
         })}
       >
-        <p>Средний</p>
-        <Hteg teg="h3">{secondPrice}</Hteg>
-        <div>
+        <div className={styles.title}>Средний</div>
+        <div className={styles.salary}>{secondPrice + " " + "₽"}</div>
+        <div className={styles.stars}>
           <StarUiOrange />
           <StarUiOrange />
           <StarUiGrey />
         </div>
       </div>
       <div className={cn(styles.level)}>
-        <p>Профессионал</p>
-        <Hteg teg="h3">{thirdPrice}</Hteg>
-        <div>
+        <div className={styles.title}>Профессионал</div>
+        <div className={styles.salary}>{thirdPrice + " " + "₽"}</div>
+        <div className={styles.stars}>
           <StarUiOrange />
           <StarUiOrange />
           <StarUiOrange />
