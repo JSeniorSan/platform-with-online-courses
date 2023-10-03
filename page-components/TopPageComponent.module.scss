@@ -11,7 +11,7 @@
     justify-content: center;
     align-content: center;
     gap: 0 19px;
-    align-items: baseline;
+    align-items: center;
     margin-top: 8.84px;
 
     .tag {
@@ -94,5 +94,30 @@
   margin-top: 20px;
   .tags {
     margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.seo {
+  margin-left: 22px;
+  h1 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: left;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
   }
 }

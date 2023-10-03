@@ -7,7 +7,6 @@ function Pluses({ page, product }: IPluses) {
   return (
     <section>
       <div className={styles.topHead}>Преимущества</div>
-
       {page.advantages.map((elem) => {
         return (
           <div key={elem._id} className={styles.advantagesBox}>

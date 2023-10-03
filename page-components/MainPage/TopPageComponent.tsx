@@ -1,3 +1,4 @@
+"use client";
 import { TopPage } from "./TopPageComponent.props";
 import { Hteg } from "../../components/hteg/Hteg";
 import { Tag } from "../../components/tag/Tag";
@@ -6,8 +7,20 @@ import Card from "../../components/card/Card";
 import HHLevelCard from "../../components/hhLevelCard/HHLevelCard";
 import { RegexRuPrice } from "../../helpers/helpers";
 import Pluses from "../../components/pluses/Pluses";
-import { P } from "../../components/paragraph/P";
+import Sort from "../../components/sort/Sort";
+import { SortEnum } from "../../components/sort/Sort.props";
+import { useReducer } from "react";
+import { SortReducer } from "./sort.reducer";
+
 function TopPageComponent({ page, product, menu }: TopPage) {
+  const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
+    SortReducer,
+    { sort: SortEnum.Rating, products: product }
+  );
+  const setSorted = (sorted: SortEnum) => {
+    dispatchSort({ type: sorted });
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.topTitle}>
@@ -15,8 +28,14 @@ function TopPageComponent({ page, product, menu }: TopPage) {
         <Tag color={"grey"} size={"m"} className={styles.tag}>
           {product.length}
         </Tag>
-        Sorting
+        <Sort sort={sort} setSort={setSorted} />
       </div>
+
+      {sortedProducts &&
+        sortedProducts.length > 0 &&
+        sortedProducts.map((elem) => {
+          return <div key={elem._id}>{elem.title}</div>;
+        })}
       <div className={styles.hhBlock}>
         <div className={styles.head}>
           <Hteg teg="h2">{`Вакансии - ${page.category}`}</Hteg>
@@ -37,14 +56,18 @@ function TopPageComponent({ page, product, menu }: TopPage) {
           />
         </div>
       </div>
-      <Pluses page={page} product={product} />
-      <P fontHeight="18px">
-        При завершении очередного проекта над графикой, специалист всегда задает
-        себе вопрос о дальнейших перспективах. Отличие профессиональных
-        дизайнеров заключается в том, что они гибкие. Сегодня разрабатывается
-        логотип новой компании, а завтра вполне можно переключиться на
-        иллюстрацию культовой книги.
-      </P>
+      {page.advantages && page.advantages.length > 0 && (
+        <>
+          <Pluses page={page} product={product} />
+          {page.seoText && (
+            <div
+              className={styles.seo}
+              dangerouslySetInnerHTML={{ __html: page.seoText }}
+            />
+          )}
+        </>
+      )}
+
       <div className={styles.topHead}>{page.tagsTitle}</div>
       <div className={styles.tagsBox}>
         {page.tags.map((tag) => {

@@ -1,0 +1,35 @@
+.sort {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: Noto Sans;
+  display: flex;
+  gap: 0 43px;
+
+  span {
+    cursor: pointer;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .active {
+    color: var(--background--primary);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      display: block;
+      fill: var(--background--primary);
+      margin-right: 8px;
+    }
+  }
+}

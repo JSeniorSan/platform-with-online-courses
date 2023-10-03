@@ -1,3 +1,4 @@
+import Products from "../../src/app/products/page";
 export interface ProductCharacteristic {
   value: string;
   name: string;
@@ -27,9 +28,9 @@ export interface ProductModel {
   updatedAt: Date;
   _v: number;
   image: string;
-  initialRaiting: number;
+  initialRating: number;
   reviews: ReviewModel[];
   reviewCount: number;
   reviewAvg?: number;
-  advantages: string;
+  advantages?: string;
 }
