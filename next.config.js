@@ -1,10 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ... other next config items
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "courses-top.ru",
+        port: "",
+        pathname: "/uploads/**",
+      },
+    ],
+  },
 
   webpack: (config) => {
-    // ... other rules
-
     config.module.rules.push({
       test: /\.svg$/,
       use: [

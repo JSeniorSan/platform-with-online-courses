@@ -1,0 +1,72 @@
+.product {
+  display: grid;
+  grid-template-columns:
+    [start] 70px [logoEnd] 30px [titleStart] calc(50% - 100px)
+    [middle] 1fr [priceStart] auto [priceEnd] 40px [creditStart] auto [creditEnd] 40px [retingStart] auto [end];
+
+  .logo {
+    grid-column: start/logoEnd;
+    grid-row: 1 / span 2;
+  }
+  .title {
+    grid-column: titleStart/middle;
+  }
+  .price {
+    grid-column: priceStart/ priceEnd;
+  }
+  .credit {
+    grid-column: creditStart/creditEnd;
+  }
+  .rating {
+    grid-column: retingStart/ end;
+  }
+  .tags {
+    grid-column: titleStart/middle;
+    grid-row: 2/3;
+  }
+  .priceTitle {
+    grid-column: priceStart/priceEnd;
+    grid-row: 2/3;
+  }
+  .creditTitle {
+    grid-column: creditStart/creditEnd;
+    grid-row: 2/3;
+  }
+  .reviewsCount {
+    grid-column: retingStart/end;
+    grid-row: 2/3;
+  }
+  .description {
+    grid-column: start/end;
+    grid-row: 3/4;
+  }
+  .feature {
+    grid-column: start/middle;
+    grid-row: 4/8;
+  }
+  .advBox {
+    grid-column: middle/end;
+    grid-row: 4/8;
+
+    .advantages {
+      grid-column: middle/end;
+      grid-row: 4/6;
+    }
+    .disadvantages {
+      grid-column: middle/end;
+      grid-row: 6/8;
+    }
+  }
+  .actions {
+    grid-column: start/middle;
+    grid-row: 10/11;
+  }
+  .hrTop {
+    grid-column: start/end;
+    grid-row: 3/3;
+  }
+  .hrBottom {
+    grid-column: start/end;
+    grid-row: 9/10;
+  }
+}

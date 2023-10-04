@@ -1,5 +1,10 @@
+import TextArea from "../../components/textarea/TextArea";
 import "../../styles/main.scss";
 
 export default function Home() {
-  return <article></article>;
+  return (
+    <article>
+      <TextArea />
+    </article>
+  );
 }

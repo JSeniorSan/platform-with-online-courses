@@ -11,6 +11,7 @@ import Sort from "../../components/sort/Sort";
 import { SortEnum } from "../../components/sort/Sort.props";
 import { useReducer } from "react";
 import { SortReducer } from "./sort.reducer";
+import { CardInfo } from "../cardInfo/CardInfo";
 
 function TopPageComponent({ page, product, menu }: TopPage) {
   const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
@@ -34,7 +35,7 @@ function TopPageComponent({ page, product, menu }: TopPage) {
       {sortedProducts &&
         sortedProducts.length > 0 &&
         sortedProducts.map((elem) => {
-          return <div key={elem._id}>{elem.title}</div>;
+          return <CardInfo key={elem._id} elementInfo={elem} />;
         })}
       <div className={styles.hhBlock}>
         <div className={styles.head}>
@@ -56,17 +57,19 @@ function TopPageComponent({ page, product, menu }: TopPage) {
           />
         </div>
       </div>
-      {page.advantages && page.advantages.length > 0 && (
-        <>
-          <Pluses page={page} product={product} />
-          {page.seoText && (
-            <div
-              className={styles.seo}
-              dangerouslySetInnerHTML={{ __html: page.seoText }}
-            />
-          )}
-        </>
-      )}
+      {page.advantages &&
+        page.advantages.length > 0 &&
+        page.advantages[0].title !== "" && (
+          <>
+            <Pluses page={page} product={product} />
+            {page.seoText && (
+              <div
+                className={styles.seo}
+                dangerouslySetInnerHTML={{ __html: page.seoText }}
+              />
+            )}
+          </>
+        )}
 
       <div className={styles.topHead}>{page.tagsTitle}</div>
       <div className={styles.tagsBox}>
