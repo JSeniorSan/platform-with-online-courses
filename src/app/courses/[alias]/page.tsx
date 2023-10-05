@@ -22,7 +22,7 @@ export default async function Course({
   const { data: page } = await axios.get<TopPageModel>(
     process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/byAlias/" + params.alias
   );
-  const { data: product } = await axios.post<ProductModel[]>(
+  const { data: products } = await axios.post<ProductModel[]>(
     process.env.NEXT_PUBLIC_DOMAIN + "/api/product/find",
     {
       category: page.category,
@@ -30,5 +30,5 @@ export default async function Course({
     }
   );
 
-  return <TopPageComponent page={page} menu={menu} product={product} />;
+  return <TopPageComponent page={page} menu={menu} product={products} />;
 }

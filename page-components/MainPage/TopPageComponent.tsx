@@ -60,7 +60,7 @@ function TopPageComponent({ page, product, menu }: TopPage) {
       {page.advantages &&
         page.advantages.length > 0 &&
         page.advantages[0].title !== "" && (
-          <>
+          <div className={styles.pluses}>
             <Pluses page={page} product={product} />
             {page.seoText && (
               <div
@@ -68,7 +68,7 @@ function TopPageComponent({ page, product, menu }: TopPage) {
                 dangerouslySetInnerHTML={{ __html: page.seoText }}
               />
             )}
-          </>
+          </div>
         )}
 
       <div className={styles.topHead}>{page.tagsTitle}</div>
