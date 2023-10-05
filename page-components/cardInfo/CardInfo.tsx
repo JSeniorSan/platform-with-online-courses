@@ -5,10 +5,10 @@ import Image from "next/image";
 import { RaitingComponent } from "../../components/rating/RaitingComponent";
 import { Tag } from "../../components/tag/Tag";
 import { Button } from "../../components/button/Button";
-import GoldAward from "../../components/goldAward/GoldAward";
+
 import { RegexRuPrice, numDevTransform } from "../../helpers/helpers";
 import { P } from "../../components/paragraph/P";
-import { values } from "../../../typescript/src/13-genrics";
+
 export function CardInfo({ elementInfo }: ICardInfo) {
   return (
     <Card BackColor="white" className={styles.product}>
