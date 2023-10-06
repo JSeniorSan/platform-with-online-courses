@@ -9,8 +9,8 @@ export interface ReviewModel {
   name: string;
   title: string;
   description: string;
-  raiting: number;
-  createAt: Date;
+  rating: number;
+  createdAt: Date;
 }
 
 export interface ProductModel {

@@ -5,7 +5,7 @@
 }
 
 .product {
-  margin-bottom: 20px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns:
     [start] 70px [logoEnd] 30px [titleStart] calc(50% - 100px)
@@ -308,4 +308,16 @@
       grid-area: coutReting;
     }
   }
+}
+
+.reviews {
+  background-color: #f9f8ff;
+}
+.closed {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.opened {
+  max-height: auto;
 }
