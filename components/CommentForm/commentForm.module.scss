@@ -1,0 +1,176 @@
+@mixin adaptive($_minWidth) {
+  @media (max-width: $_minWidth) {
+    @content;
+  }
+}
+
+.reviewForm {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: [start] auto auto 1fr auto [end];
+  align-items: center;
+  .inputName {
+    grid-column: start / 2;
+    margin-right: 30px;
+  }
+
+  .inputTitle {
+    grid-column: 2 / 3;
+  }
+
+  .ratingBox {
+    grid-column: 4 / 5;
+    display: flex;
+    gap: 20px;
+
+    .ratingTitle {
+      color: var(--text--color);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .rating {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .textarea {
+    grid-column: start / end;
+    grid-row: 2 / 3;
+    margin-top: 20px;
+    margin-bottom: 19px;
+  }
+  .btnBox {
+    grid-column: start / end;
+    grid-row: 3 / 4;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    .btn {
+      height: 35px;
+      width: 148px;
+    }
+
+    .textMark {
+      color: var(--text--color);
+      margin-left: 13px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 171.429% */
+    }
+  }
+
+  .success {
+    background-color: #c8f8e4;
+    position: relative;
+    grid-column: start / end;
+    padding: 20px;
+    border-radius: 5px;
+
+    .send {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .thx {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    svg {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+@include adaptive(1130px) {
+  .reviewForm {
+    grid-template-columns: [start] auto 1fr [end];
+
+    .ratingBox {
+      grid-column: auto;
+      grid-row: 2 / 3;
+    }
+    .textarea {
+      grid-row: 3 / 4;
+    }
+    .btnBox {
+      grid-row: 4/5;
+    }
+  }
+}
+
+@include adaptive(900px) {
+  .reviewForm {
+    grid-template-columns: [start] auto 1fr [end];
+
+    .inputName {
+      margin-right: 0;
+    }
+
+    .inputTitle {
+      grid-row: 2 / 3;
+      grid-column: start / 2;
+    }
+
+    .ratingBox {
+      grid-column: start / 2;
+      display: flex;
+      gap: 20px;
+      grid-row: 3/4;
+
+      .ratingTitle {
+        color: var(--text--color);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .rating {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .textarea {
+      grid-column: start / end;
+      grid-row: 4 / 5;
+      margin-top: 20px;
+      margin-bottom: 19px;
+    }
+    .btnBox {
+      grid-column: start / end;
+      grid-row: 5 / 6;
+      display: flex;
+      gap: 13px;
+      align-items: center;
+      .btn {
+        height: 35px;
+        width: 148px;
+      }
+
+      .textMark {
+        color: var(--text--color);
+        margin-left: 13px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+      }
+    }
+    .success {
+      grid-row: 6 / 7;
+    }
+  }
+}

@@ -98,6 +98,9 @@
     font-weight: 400;
     line-height: normal;
     text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   .credit {
     margin-top: 40px;
@@ -283,9 +286,8 @@
     }
     .price {
       grid-area: price;
-      margin: 0;
-      justify-self: start;
       margin: 10px 0;
+      justify-self: start;
     }
     .credit {
       grid-area: credit;

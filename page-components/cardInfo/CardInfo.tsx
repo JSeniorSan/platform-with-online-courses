@@ -14,6 +14,7 @@ import { useState } from "react";
 import ReviewCard from "../../components/formCard/ReviewCard";
 import DivHr from "../../components/divHr/DivHr";
 import CommentForm from "../../components/CommentForm/CommentForm";
+import { wrap } from "module";
 
 export function CardInfo({ elementInfo }: ICardInfo) {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
@@ -28,7 +29,6 @@ export function CardInfo({ elementInfo }: ICardInfo) {
             height={70}
             quality={100}
             loading="lazy"
-            objectFit="fill"
           />
         </div>
         <div className={styles.title}>{elementInfo.title}</div>
@@ -47,6 +47,7 @@ export function CardInfo({ elementInfo }: ICardInfo) {
           <RaitingComponent
             rating={elementInfo.reviewAvg ?? elementInfo.initialRating}
             isEditable={false}
+            style={{ display: "flex", flexWrap: "nowrap" }}
           />
         </div>
         <div className={styles.tags}>
