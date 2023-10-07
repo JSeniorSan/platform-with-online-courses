@@ -1,3 +1,4 @@
+"use client";
 import styles from "./commentForm.module.scss";
 import cn from "classnames";
 import { ICommentForm } from "./CommentForm.props";
@@ -6,21 +7,48 @@ import { RaitingComponent } from "../rating/RaitingComponent";
 import TextArea from "../textarea/TextArea";
 import { Button } from "../button/Button";
 import Close from "../ui/Close";
+import { useForm, Controller } from "react-hook-form";
+import { IReviewCard } from "./Review.interface";
 
 function CommentForm({ productId, className, ...props }: ICommentForm) {
+  const { control, register, handleSubmit } = useForm<IReviewCard>();
+  const onSubmit = (data: IReviewCard) => {
+    console.log(data);
+  };
+
   return (
-    <div className={cn(styles.reviewForm)} {...props}>
-      <Input className={styles.inputName} placeholder="Имя" />
-      <Input className={styles.inputTitle} placeholder="Заголовок отзыва" />
+    <form
+      className={cn(styles.reviewForm)}
+      onSubmit={handleSubmit(onSubmit)}
+      {...props}
+    >
+      <Input
+        className={styles.inputName}
+        placeholder="Имя"
+        {...register("name")}
+      />
+      <Input
+        className={styles.inputTitle}
+        placeholder="Заголовок отзыва"
+        {...register("title")}
+      />
       <div className={styles.ratingBox}>
         <span className={styles.ratingTitle}>Оценка:</span>
-        <RaitingComponent
-          rating={0}
-          isEditable
-          className={styles.rating}
-        ></RaitingComponent>
+        <Controller
+          name="rating"
+          control={control}
+          render={({ field }) => (
+            <RaitingComponent
+              rating={field.value}
+              setRating={field.onChange}
+              isEditable
+              ref={field.ref}
+              className={styles.rating}
+            />
+          )}
+        />
       </div>
-      <TextArea className={styles.textarea} />
+      <TextArea className={styles.textarea} {...register("description")} />
       <div className={styles.btnBox}>
         <Button appearence="primary" className={styles.btn}>
           Отправить
@@ -36,7 +64,7 @@ function CommentForm({ productId, className, ...props }: ICommentForm) {
         </div>
         <Close />
       </div>
-    </div>
+    </form>
   );
 }
 

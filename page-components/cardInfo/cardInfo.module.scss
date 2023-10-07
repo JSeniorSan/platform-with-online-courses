@@ -28,10 +28,10 @@
     grid-column: retingStart/ end;
   }
   .tags {
-    grid-column: titleStart/middle;
+    grid-column: titleStart / middle;
   }
   .priceTitle {
-    grid-column: priceStart/priceEnd;
+    grid-column: priceStart / priceEnd;
   }
   .creditTitle {
     grid-column: creditStart/creditEnd;
@@ -101,6 +101,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    gap: 5px;
   }
   .credit {
     margin-top: 40px;

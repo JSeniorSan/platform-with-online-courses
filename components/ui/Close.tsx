@@ -13,7 +13,7 @@ function Close() {
         x2="10.5459"
         y2="10.4246"
         stroke="#1CC37E"
-        stroke-width="3"
+        strokeWidth="3"
       />
       <line
         x1="1.93934"
@@ -21,7 +21,7 @@ function Close() {
         x2="10.4246"
         y2="1.93935"
         stroke="#1CC37E"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </svg>
   );

@@ -1,0 +1,19 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .title {
+    font-size: xx-large;
+    font-weight: 700;
+    font-stretch: extra-expanded;
+
+    .online {
+      color: skyblue;
+    }
+  }
+  .arrow {
+    fill: url(#header-shape-gradient);
+  }
+}

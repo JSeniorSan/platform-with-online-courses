@@ -14,7 +14,6 @@ import { useState } from "react";
 import ReviewCard from "../../components/formCard/ReviewCard";
 import DivHr from "../../components/divHr/DivHr";
 import CommentForm from "../../components/CommentForm/CommentForm";
-import { wrap } from "module";
 
 export function CardInfo({ elementInfo }: ICardInfo) {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);

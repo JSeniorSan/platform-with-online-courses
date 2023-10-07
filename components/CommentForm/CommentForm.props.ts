@@ -1,6 +1,9 @@
-import { DetailedHTMLProps, HTMLAttributes } from "react";
+import { DetailedHTMLProps, FormHTMLAttributes, HTMLAttributes } from "react";
 
 export interface ICommentForm
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  extends DetailedHTMLProps<
+    FormHTMLAttributes<HTMLFormElement>,
+    HTMLFormElement
+  > {
   productId: string;
 }

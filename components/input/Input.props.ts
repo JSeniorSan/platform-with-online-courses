@@ -5,5 +5,3 @@ export interface IInputProps
     InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {}
-
-
