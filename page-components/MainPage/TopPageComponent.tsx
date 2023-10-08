@@ -12,7 +12,6 @@ import { SortEnum } from "../../components/sort/Sort.props";
 import { useReducer } from "react";
 import { SortReducer } from "./sort.reducer";
 import { CardInfo } from "../cardInfo/CardInfo";
-
 function TopPageComponent({ page, product, menu }: TopPage) {
   const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
     SortReducer,

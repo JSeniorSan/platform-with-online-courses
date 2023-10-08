@@ -5,6 +5,7 @@ import { MenuItem } from "../../../../interfaces/menu/menu.interfaces";
 import { TopPageModel } from "../../../../interfaces/toplevel/page.interfaces";
 import { ProductModel } from "../../../../interfaces/toplevel/product.interfaces";
 import TopPageComponent from "../../../../page-components/MainPage/TopPageComponent";
+import { API } from "../../../../helpers/API";
 
 const firstCategory = 0;
 
@@ -13,17 +14,16 @@ export default async function Course({
 }: {
   params: { alias: string };
 }) {
-  const { data: menu } = await axios.post<MenuItem[]>(
-    process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
-    {
-      firstCategory,
-    }
-  );
+  const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
+    firstCategory,
+  });
+  console.log(menu);
+
   const { data: page } = await axios.get<TopPageModel>(
-    process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/byAlias/" + params.alias
+    API.topPage.byAliases + params.alias
   );
   const { data: products } = await axios.post<ProductModel[]>(
-    process.env.NEXT_PUBLIC_DOMAIN + "/api/product/find",
+    API.product.find,
     {
       category: page.category,
       limit: 10,

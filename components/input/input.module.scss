@@ -1,19 +1,33 @@
-.input {
-  color: var(--text--color);
+.wrapper {
+  position: relative;
+  .input {
+    color: var(--text--color);
 
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding: 7px 12px;
-  outline-color: var(--background--primary);
-  border-radius: 5px;
-  background: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  border: none;
-  font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 7px 12px;
+    outline-color: var(--background--primary);
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    border: none;
+    font-family: "Noto Sans";
 
-  &::placeholder {
-    color: #a4a4a4;
+    &::placeholder {
+      color: #a4a4a4;
+    }
+  }
+
+  .error {
+    border: 1px solid red;
+  }
+  .errorMessage {
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    font-size: small;
   }
 }

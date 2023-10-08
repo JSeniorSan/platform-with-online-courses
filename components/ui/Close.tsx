@@ -1,4 +1,4 @@
-function Close() {
+function Close({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ function Close() {
       height="12"
       viewBox="0 0 12 12"
       fill="none"
+      {...props}
     >
       <line
         x1="2.06066"

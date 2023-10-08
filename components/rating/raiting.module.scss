@@ -8,3 +8,19 @@
 .editable {
   fill: var(--background--primary);
 }
+
+.wrapper {
+  position: relative;
+
+  .errorMessage {
+    position: absolute;
+    color: red;
+    left: 25px;
+    bottom: -20px;
+    font-size: 13px;
+  }
+}
+
+.error svg {
+  stroke: red;
+}

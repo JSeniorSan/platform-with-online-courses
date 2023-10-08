@@ -5,11 +5,20 @@ import cn from "classnames";
 import { ForwardedRef, forwardRef } from "react";
 const Input = forwardRef(
   (
-    { className, ...props }: IInputProps,
+    { className, error, ...props }: IInputProps,
     ref: ForwardedRef<HTMLInputElement>
   ) => {
     return (
-      <input className={cn(styles.input, className)} ref={ref} {...props} />
+      <div className={styles.wrapper}>
+        <input
+          className={cn(styles.input, className, {
+            [styles.error]: error,
+          })}
+          ref={ref}
+          {...props}
+        />
+        {error && <span className={styles.errorMessage}>{error.message}</span>}
+      </div>
     );
   }
 );

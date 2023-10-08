@@ -7,7 +7,14 @@ import styles from "./raiting.module.scss";
 import { ForwardedRef, forwardRef } from "react";
 export const RaitingComponent = forwardRef(
   (
-    { rating, isEditable = false, setRating, ...props }: IRaiting,
+    {
+      rating,
+      isEditable = false,
+      setRating,
+      error,
+      className,
+      ...props
+    }: IRaiting,
     ref: ForwardedRef<HTMLDivElement>
   ): JSX.Element => {
     useEffect(() => {
@@ -57,13 +64,18 @@ export const RaitingComponent = forwardRef(
       changeRating(i);
     };
 
-    console.log("rendered");
-
     return (
-      <div ref={ref} {...props}>
+      <div
+        ref={ref}
+        className={cn(styles.wrapper, className, {
+          [styles.error]: error,
+        })}
+        {...props}
+      >
         {ratingAmount.map((elem, i) => {
           return <span key={i}>{elem}</span>;
         })}
+        {error && <span className={styles.errorMessage}>{error.message}</span>}
       </div>
     );
   }

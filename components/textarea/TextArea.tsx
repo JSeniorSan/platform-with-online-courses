@@ -4,16 +4,21 @@ import cn from "classnames";
 import { ForwardedRef, forwardRef } from "react";
 const TextArea = forwardRef(
   (
-    { className, ...props }: ITextArea,
+    { className, error, ...props }: ITextArea,
     ref: ForwardedRef<HTMLTextAreaElement>
   ) => {
     return (
-      <textarea
-        placeholder="Текст отзыва"
-        className={cn(styles.textarea, className)}
-        ref={ref}
-        {...props}
-      />
+      <div className={cn(styles.wrapper, className)}>
+        <textarea
+          placeholder="Текст отзыва"
+          className={cn(styles.textarea, {
+            [styles.error]: error,
+          })}
+          ref={ref}
+          {...props}
+        />
+        {error && <span className={styles.errorMessage}>{error.message}</span>}
+      </div>
     );
   }
 );

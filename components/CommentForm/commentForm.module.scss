@@ -63,13 +63,30 @@
       line-height: 24px; /* 171.429% */
     }
   }
-
-  .success {
-    background-color: #c8f8e4;
+  .panel {
     position: relative;
     grid-column: start / end;
     padding: 20px;
     border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .errorBox {
+    background-color: #fc5639a8;
+    display: flex;
+    justify-content: space-between;
+
+    .close {
+      stroke: #fc5639;
+      cursor: pointer;
+      line {
+        stroke: #fc5639;
+      }
+    }
+  }
+
+  .success {
+    background-color: #c8f8e4;
 
     .send {
       font-size: 16px;
