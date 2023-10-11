@@ -17,7 +17,6 @@ export default async function Course({
   const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
     firstCategory,
   });
-  console.log(menu);
 
   const { data: page } = await axios.get<TopPageModel>(
     API.topPage.byAliases + params.alias

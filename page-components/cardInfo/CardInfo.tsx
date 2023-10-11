@@ -10,13 +10,22 @@ import { Button } from "../../components/button/Button";
 import cn from "classnames";
 import { RegexRuPrice, numDevTransform } from "../../helpers/helpers";
 import { P } from "../../components/paragraph/P";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ReviewCard from "../../components/formCard/ReviewCard";
 import DivHr from "../../components/divHr/DivHr";
 import CommentForm from "../../components/CommentForm/CommentForm";
 
 export function CardInfo({ elementInfo }: ICardInfo) {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+  const reviewRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    setIsReviewOpened(true);
+    reviewRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <>
       <Card BackColor="white" className={styles.product}>
@@ -61,12 +70,14 @@ export function CardInfo({ elementInfo }: ICardInfo) {
         <div className={styles.priceTitle}>цена</div>
         <div className={styles.creditTitle}>в кредит</div>
         <div className={styles.reviewsCount}>
-          {elementInfo.reviewCount}{" "}
-          {numDevTransform(elementInfo.reviewCount, [
-            "отзыв",
-            "отзыва",
-            "отзывов",
-          ])}
+          <a href="#ref" onClick={handleClick}>
+            {elementInfo.reviewCount}{" "}
+            {numDevTransform(elementInfo.reviewCount, [
+              "отзыв",
+              "отзыва",
+              "отзывов",
+            ])}
+          </a>
         </div>
 
         <div className={styles.hrTop}>
@@ -119,7 +130,7 @@ export function CardInfo({ elementInfo }: ICardInfo) {
           [styles.closed]: !isReviewOpened,
         })}
       >
-        <ReviewCard reviewsInfo={elementInfo.reviews} />
+        <ReviewCard reviewsInfo={elementInfo.reviews} ref={reviewRef} />
         <DivHr />
         <CommentForm productId={elementInfo._id} />
       </Card>
