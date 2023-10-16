@@ -24,14 +24,20 @@
   background-color: var(--background--hh);
   font-weight: 600;
   color: var(--text--secondary--color);
-  font-style: normal;
+  text-align: center;
   font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
 }
 
 .grey {
   font-weight: 600;
   background-color: var(--background--topTag);
   color: var(--text--secondary--color);
+  font-style: normal;
+  text-align: center;
+  font-size: 14px;
   font-style: normal;
   line-height: 14px;
 }

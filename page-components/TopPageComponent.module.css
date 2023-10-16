@@ -1,0 +1,125 @@
+.wrapper .topTitle {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: center;
+  align-content: center;
+  gap: 0 19px;
+  align-items: center;
+  margin-top: 8.84px;
+}
+.wrapper .topTitle .tag {
+  justify-self: flex-start;
+}
+.wrapper .hhBlock {
+  margin: 0 30px;
+}
+.wrapper .hhBlock .head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-content: baseline;
+  gap: 0 30px;
+  align-items: baseline;
+}
+.wrapper .hhBlock .tag {
+  justify-self: flex-start;
+}
+.wrapper .hhBlock .card {
+  width: 260px;
+  height: 140px;
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .wrapper .hhBlock .card {
+    grid-template-columns: 1fr;
+    margin: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 860px) {
+  .wrapper .hhBlock .card {
+    grid-template-columns: 1fr;
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+}
+.wrapper .hhBlock .card .title {
+  max-width: 260px;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 24px;
+}
+.wrapper .hhBlock .card span {
+  color: var(--background--primary);
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.wrapper .hhBlock .hhCards {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) auto;
+  gap: 30px;
+  margin-top: 24px;
+}
+@media (max-width: 1200px) {
+  .wrapper .hhBlock .hhCards {
+    grid-template-columns: 1fr;
+  }
+}
+.wrapper .pluses {
+  margin: 0 30px;
+}
+.wrapper .topHead {
+  color: #3b434e;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.tagsBox {
+  margin-left: 30px;
+  margin-bottom: 49px;
+  margin-top: 20px;
+}
+.tagsBox .tags {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.seo {
+  margin-left: 22px;
+}
+.seo h1 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 35px;
+  text-align: left;
+}
+.seo h2 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: left;
+}
+.seo h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+}/*# sourceMappingURL=TopPageComponent.module.css.map */

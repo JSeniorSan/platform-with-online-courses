@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+}
+.wrapper .input {
+  color: var(--text--color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 7px 12px;
+  outline-color: var(--background--primary);
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  border: none;
+  font-family: "Noto Sans";
+}
+.wrapper .input::-moz-placeholder {
+  color: #a4a4a4;
+}
+.wrapper .input::placeholder {
+  color: #a4a4a4;
+}
+.wrapper .error {
+  border: 1px solid red;
+}
+.wrapper .errorMessage {
+  color: rgb(255, 0, 0);
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  font-size: small;
+}/*# sourceMappingURL=input.module.css.map */

@@ -9,6 +9,12 @@
   display: grid;
   grid-template-columns: [start] auto auto 1fr auto [end];
   align-items: center;
+  @include adaptive(925px) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: start;
+  }
   .inputName {
     grid-column: start / 2;
     margin-right: 30px;
@@ -49,6 +55,12 @@
     display: flex;
     gap: 13px;
     align-items: center;
+    @include adaptive(625px) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
     .btn {
       height: 35px;
       width: 148px;
@@ -117,6 +129,7 @@
     .ratingBox {
       grid-column: auto;
       grid-row: 2 / 3;
+      margin-top: 25px;
     }
     .textarea {
       grid-row: 3 / 4;
@@ -144,7 +157,7 @@
       grid-column: start / 2;
       display: flex;
       gap: 20px;
-      grid-row: 3/4;
+      grid-row: 3 / 4;
 
       .ratingTitle {
         color: var(--text--color);

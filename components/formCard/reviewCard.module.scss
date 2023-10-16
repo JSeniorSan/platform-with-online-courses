@@ -1,3 +1,8 @@
+@mixin adaptive($_minWidth) {
+  @media (max-width: $_minWidth) {
+    @content;
+  }
+}
 .wrapper {
   padding: 30px;
   .review {
@@ -5,6 +10,11 @@
     grid-template-columns: [start] auto auto 1fr auto [end];
     align-items: center;
     padding: 10px;
+    border-bottom: 1px soldi grey;
+
+    @include adaptive(625px) {
+      grid-template-columns: [start] 30px auto 1fr [end];
+    }
 
     .image {
       width: fit-content;
@@ -37,9 +47,20 @@
       font-weight: 400;
       line-height: normal;
       color: var(--text--color);
+
+      @include adaptive(625px) {
+        grid-column: 3 / end;
+        grid-row: 2 / 3;
+        text-align: right;
+      }
     }
     .rating {
       grid-column: 5 / 6;
+
+      @include adaptive(625px) {
+        grid-column: 1 / 3;
+        padding-top: 10px;
+      }
     }
     .description {
       margin-top: 12px;
@@ -50,6 +71,10 @@
       font-weight: 400;
       line-height: 24px;
       color: var(--text--color);
+
+      @include adaptive(625px) {
+        grid-row: 3/ 4;
+      }
     }
   }
 }

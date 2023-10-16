@@ -41,8 +41,11 @@ export function CardInfo({ elementInfo }: ICardInfo) {
         </div>
         <div className={styles.title}>{elementInfo.title}</div>
         <div className={styles.price}>
-          {RegexRuPrice(elementInfo.price) + " ₽ "}
-          <Tag color="green" size={"m"}>
+          <div className={styles.price__cost}>
+            {RegexRuPrice(elementInfo.price) + " ₽ "}
+          </div>
+
+          <Tag color="green" size={"m"} className={styles.greenTag}>
             {"-" +
               RegexRuPrice(elementInfo.oldPrice - elementInfo.price) +
               " ₽"}

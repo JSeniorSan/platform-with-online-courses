@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+}
+.wrapper .textarea {
+  color: var(--text--color);
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 7px 12px;
+  border: none;
+  width: 100%;
+  outline-color: var(--background--primary);
+  overflow-y: auto;
+}
+.wrapper .textarea::-moz-placeholder {
+  color: #a4a4a4;
+}
+.wrapper .textarea::placeholder {
+  color: #a4a4a4;
+}
+.wrapper .error {
+  border: 1px solid red;
+}
+.wrapper .errorMessage {
+  color: rgb(255, 0, 0);
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+  font-size: small;
+}/*# sourceMappingURL=textArea.module.css.map */

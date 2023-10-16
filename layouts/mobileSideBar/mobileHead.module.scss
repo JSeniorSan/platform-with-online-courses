@@ -1,0 +1,17 @@
+@mixin adaptive($_minWidth) {
+  @media (max-width: $_minWidth) {
+    @content;
+  }
+}
+
+.sideBar {
+  align-content: start;
+  background-color: var(--wrapper--color);
+  @include adaptive(865px) {
+    display: none;
+  }
+  .logo {
+    margin-top: 34px;
+    margin-left: 34px;
+  }
+}

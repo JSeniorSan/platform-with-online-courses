@@ -1,0 +1,39 @@
+.topHead {
+  color: var(--text--color);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 47px;
+  margin-bottom: 39px;
+}
+
+.advantagesBox {
+  display: grid;
+  justify-items: start;
+}
+.advantagesBox .titleBox {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.advantagesBox .titleBox .title {
+  margin-left: 43px;
+  align-self: center;
+  color: var(--text--color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.advantagesBox .pageDescription {
+  border-left: 1px solid #d2d2d2;
+  padding-left: 68px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  color: var(--text--color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+}/*# sourceMappingURL=pluses.module.css.map */

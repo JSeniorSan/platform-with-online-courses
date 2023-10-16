@@ -1,0 +1,167 @@
+.reviewForm {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: [start] auto auto 1fr auto [end];
+  align-items: center;
+}
+.reviewForm .inputName {
+  grid-column: start/2;
+  margin-right: 30px;
+}
+.reviewForm .inputTitle {
+  grid-column: 2/3;
+}
+.reviewForm .ratingBox {
+  grid-column: 4/5;
+  display: flex;
+  gap: 20px;
+}
+.reviewForm .ratingBox .ratingTitle {
+  color: var(--text--color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.reviewForm .ratingBox .rating {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.reviewForm .textarea {
+  grid-column: start/end;
+  grid-row: 2/3;
+  margin-top: 20px;
+  margin-bottom: 19px;
+}
+.reviewForm .btnBox {
+  grid-column: start/end;
+  grid-row: 3/4;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.reviewForm .btnBox .btn {
+  height: 35px;
+  width: 148px;
+}
+.reviewForm .btnBox .textMark {
+  color: var(--text--color);
+  margin-left: 13px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+.reviewForm .panel {
+  position: relative;
+  grid-column: start/end;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.reviewForm .errorBox {
+  background-color: rgba(252, 86, 57, 0.6588235294);
+  display: flex;
+  justify-content: space-between;
+}
+.reviewForm .errorBox .close {
+  stroke: #fc5639;
+  cursor: pointer;
+}
+.reviewForm .errorBox .close line {
+  stroke: #fc5639;
+}
+.reviewForm .success {
+  background-color: #c8f8e4;
+}
+.reviewForm .success .send {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.reviewForm .success .thx {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.reviewForm .success svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1130px) {
+  .reviewForm {
+    grid-template-columns: [start] auto 1fr [end];
+  }
+  .reviewForm .ratingBox {
+    grid-column: auto;
+    grid-row: 2/3;
+  }
+  .reviewForm .textarea {
+    grid-row: 3/4;
+  }
+  .reviewForm .btnBox {
+    grid-row: 4/5;
+  }
+}
+@media (max-width: 900px) {
+  .reviewForm {
+    grid-template-columns: [start] auto 1fr [end];
+  }
+  .reviewForm .inputName {
+    margin-right: 0;
+  }
+  .reviewForm .inputTitle {
+    grid-row: 2/3;
+    grid-column: start/2;
+  }
+  .reviewForm .ratingBox {
+    grid-column: start/2;
+    display: flex;
+    gap: 20px;
+    grid-row: 3/4;
+  }
+  .reviewForm .ratingBox .ratingTitle {
+    color: var(--text--color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .reviewForm .ratingBox .rating {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .reviewForm .textarea {
+    grid-column: start/end;
+    grid-row: 4/5;
+    margin-top: 20px;
+    margin-bottom: 19px;
+  }
+  .reviewForm .btnBox {
+    grid-column: start/end;
+    grid-row: 5/6;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+  }
+  .reviewForm .btnBox .btn {
+    height: 35px;
+    width: 148px;
+  }
+  .reviewForm .btnBox .textMark {
+    color: var(--text--color);
+    margin-left: 13px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+  }
+  .reviewForm .success {
+    grid-row: 6/7;
+  }
+}/*# sourceMappingURL=commentForm.module.css.map */

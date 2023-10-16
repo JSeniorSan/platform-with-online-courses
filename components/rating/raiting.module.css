@@ -8,4 +8,19 @@
 
 .editable {
   fill: var(--background--primary);
+}
+
+.wrapper {
+  position: relative;
+}
+.wrapper .errorMessage {
+  position: absolute;
+  color: red;
+  left: 25px;
+  bottom: -20px;
+  font-size: 13px;
+}
+
+.error svg {
+  stroke: red;
 }/*# sourceMappingURL=raiting.module.css.map */

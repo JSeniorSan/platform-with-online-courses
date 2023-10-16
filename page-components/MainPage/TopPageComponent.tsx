@@ -28,7 +28,11 @@ function TopPageComponent({ page, product, menu }: TopPage) {
         <Tag color={"grey"} size={"m"} className={styles.tag}>
           {product.length}
         </Tag>
-        <Sort sort={sort} setSort={setSorted} />
+        <Sort
+          sort={sort}
+          setSort={setSorted}
+          className={styles.wrapper__sortPanel}
+        />
       </div>
 
       {sortedProducts &&

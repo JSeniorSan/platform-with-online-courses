@@ -57,6 +57,13 @@
   }
   .actions {
     grid-column: start/middle;
+
+    @include adaptive(625px) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: fit-content;
+    }
   }
   .hrTop {
     grid-column: start/end;
@@ -102,6 +109,11 @@
     flex-wrap: nowrap;
     align-items: center;
     gap: 5px;
+
+    .price__cost {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
   .credit {
     margin-top: 40px;
@@ -266,7 +278,7 @@
       grid-area: hrBottom;
     }
   }
-  @include adaptive(640px) {
+  @include adaptive(840px) {
     grid-template-columns: 70px 30px 1fr;
     align-items: center;
     grid-template-areas:
