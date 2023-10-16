@@ -1,4 +1,3 @@
-import "../../../../styles/main.scss";
 import React from "react";
 import axios from "axios";
 import { MenuItem } from "../../../../interfaces/menu/menu.interfaces";

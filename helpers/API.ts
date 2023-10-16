@@ -1,12 +1,12 @@
 export const API = {
   topPage: {
-    find: process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
-    byAliases: process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/byAlias/",
+    find: "https: //courses-top.ru" + "/api/top-page/find",
+    byAliases: "https://courses-top.ru" + "/api/top-page/byAlias/",
   },
   product: {
-    find: process.env.NEXT_PUBLIC_DOMAIN + "/api/product/find",
+    find: "https://courses-top.ru" + "/api/product/find",
   },
   postFormData: {
-    sendURL: process.env.NEXT_PUBLIC_DOMAIN + "/api/review/create-demo",
+    sendURL: "https://courses-top.ru" + "/api/review/create-demo",
   },
 };
