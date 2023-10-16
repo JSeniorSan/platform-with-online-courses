@@ -1,5 +1,5 @@
 import { IParagraph } from "./paragraph.props";
-import styles from "./Paragraph.module.scss";
+import styles from "./paragraph.module.scss";
 import cn from "classnames";
 export function P({
   children,
