@@ -1,6 +1,6 @@
 "use client";
 import { StarUi } from "../ui/StarUi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { IRaiting } from "./raiting.props";
 import cn from "classnames";
 import styles from "./raiting.module.scss";
@@ -17,10 +17,6 @@ export const RaitingComponent = forwardRef(
     }: IRaiting,
     ref: ForwardedRef<HTMLDivElement>
   ): JSX.Element => {
-    useEffect(() => {
-      changeRating(rating);
-    }, [rating]);
-
     const [ratingAmount, setRatingAmount] = useState<JSX.Element[]>(
       new Array(5).fill(<></>)
     );
@@ -48,6 +44,10 @@ export const RaitingComponent = forwardRef(
       );
       setRatingAmount(starArr);
     };
+
+    useEffect(() => {
+      changeRating(rating);
+    }, [rating]);
 
     const onClick = (i: number) => {
       if (!isEditable || !setRating) return;
